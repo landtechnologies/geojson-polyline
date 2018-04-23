@@ -1,5 +1,5 @@
 {
-  "name": "geojson-polyline",
+  "name": "@landtech/geojson-polyline",
   "version": "1.0.0",
   "description": "Convert GeoJSON coordinates to and from encoded polylines. Supports all major GeoJSON types.",
   "main": "geojson-polyline.js",
@@ -20,7 +20,7 @@
     "encoded",
     "geojson"
   ],
-  "author": "Benjamin Barber",
+  "author": "Land Technologies Ltd",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^13.1.0",
