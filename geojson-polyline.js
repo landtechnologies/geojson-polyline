@@ -1,7 +1,7 @@
 var assign = require('object-assign')
 var polyline = require('polyline')
 
-var GeoJSONPolyline = module.exports = {
+module.exports = {
   // Pick and choose your verbs
   encode: geo2poly,
   decode: poly2geo,
@@ -170,15 +170,4 @@ function flip (coords) {
     flipped.push(coords[i].slice().reverse())
   }
   return flipped
-}
-
-if (typeof addEventListener !== 'undefined') {
-  /* global addEventListener, postMessage */
-  addEventListener('message', function (message) {
-    var method = message.data[0]
-    var geojson = message.data[1]
-    var precision = message.data[2]
-    var converted = GeoJSONPolyline[method](geojson, precision)
-    postMessage(converted)
-  })
 }
